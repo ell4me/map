@@ -1,0 +1,146 @@
+.mapContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.mapButtonsDiv {
+  overflow: hidden;
+  height: 75px;
+}
+
+.mapButtonsInnerDiv {
+  height: 100%;
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'GT Eesti Pro Text';
+}
+
+.mapButtonsContainer {
+  display: inline-block;
+  background-color: #f6f6f6;
+  padding: 6px;
+  border-radius: 2px;
+}
+
+.mapButton {
+  padding: 4px 15px;
+  text-align: center;
+  display: inline-flex;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 100%;
+  align-items: center;
+}
+
+.mapButtonActive {
+  background-color: #fcb53b;
+}
+
+.mapContinentContainer {
+  margin: 0 64px;
+  display: none;
+  justify-content: center;
+  height: 390px;
+  position: relative;
+  svg {
+    padding-bottom: 30px;
+  }
+}
+
+
+.mapContinentVisibleContainer {
+  display: flex;
+}
+
+.regionDefault {
+  fill: #CBCBCB;
+  cursor: default;
+  path {
+    fill: #CBCBCB;
+  }
+}
+
+.regionActive {
+  fill: #A8A8A8;
+  cursor: pointer;
+  position: relative;
+  &:hover{
+    fill: #F57F29;
+    path{
+      fill: #F57F29;
+    }
+  }
+}
+
+.divisionContainer{
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 3px 7px;
+  color: #000;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  opacity: 0;
+  &::before{
+    content: '';
+    border: 7px solid transparent;
+    border-top: 6px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+  span{
+    font-family: GT Eesti Pro Text;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.active{
+  opacity: 1;
+}
+
+.topProjectsContainer{
+  padding: 30px 0 25px 0;
+  margin: 0 20px;
+  border-top: 1px solid #F6F6F6;
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 160px;
+  height: 100%;
+  .projectItem{
+    padding-bottom: 15px;
+    .division{
+      font-family: 'GT Eesti Pro Text';
+      font-weight: 400;
+      font-size: 13px;
+      color: rgba(0,0,0,.5);
+      margin-bottom: 2px;
+    }
+    .projectName{
+      display: flex;
+      align-items: center;
+      color: #000;
+      text-decoration: none;
+      transition: all .125s ease;
+      cursor: pointer;
+      &:hover{
+        opacity: .75;
+        transition: all .125s ease;
+      }
+      span{
+        font-family: 'GT Eesti Pro Text';
+        font-weight: 500;
+        font-size: 15px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

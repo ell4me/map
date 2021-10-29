@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "map-projects-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mapProjects/MapProjectsWebPart.js",
+          "manifest": "./src/webparts/mapProjects/MapProjectsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MapProjectsWebPartStrings": "lib/webparts/mapProjects/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
